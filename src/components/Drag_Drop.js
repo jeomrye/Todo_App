@@ -8,12 +8,10 @@ const SortableList = SortableContainer(({ items }) => {
     <ul>
       {items.map((value, index) => (
         <SortableItem key={`item-${value}`} index={index} value={value} />
-      ))}
+        ))}
     </ul>
   );
 });
-console.log("아이템! : " + SortableItem);
-console.log("리스트! : " + SortableList);
 
 class SortableComponent extends Component {
   state = {
