@@ -1,6 +1,16 @@
 .TodoList {
-    width: 90vw;
+    width: 60vw;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 10px 10px 10px;
+}
+
+@media screen and (max-width: 1090px) {
+  .TodoList {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
 }

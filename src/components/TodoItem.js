@@ -32,7 +32,7 @@ const TodoItem = ({
             onInsertToggle(); // 각각의 TodoItem들의 Text를 클릭할 시 TodoInsert 컴포넌트를 불러와야 하기에 onInsertToggle 함수가 사용됨
           }}
         >
-          {text}
+          {text.slice(0,17)}
         </div>
       </div>
     </div>

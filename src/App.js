@@ -4,7 +4,6 @@ import Template from "./components/Template";
 import TodoList from "./components/TodoList";
 import { MdAddCircle } from "react-icons/md";
 import TodoInsert from "./components/TodoInsert";
-import SortableComponent from "./components/Drag_Drop"
 
 
 /* Application의 구조를 담당할 Template 컴포넌트를 만들었고
@@ -94,7 +93,8 @@ const App = () => {
           onInsertToggle={onInsertToggle}
           onChangeSelectedTodo={onChangeSelectedTodo}
       />
-      <SortableComponent />
+      {/* <SortableComponent />
+      <SortTest /> */}
       <div className="add-todo-button" onClick={onInsertToggle}>
         {" "}
         {/* 플러스 버튼을 눌렀을 시 TodoInsert 컴포넌트를 불러옴  */}
