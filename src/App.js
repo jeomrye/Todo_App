@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Component } from "react";
 import "./App.css";
 import Template from "./components/Template";
 import TodoList from "./components/TodoList";
@@ -117,4 +117,25 @@ const App = () => {
   );
 };
 
-export default App;
+class Test extends Component{
+  state = { users: [] }
+  
+  componentDidMount() {
+    fetch('/users')
+      .then(res => res.json())
+      .then(users => this.setState({ users }));
+  }
+
+  render() {
+    return (
+      <div className="Test">
+        <h1>Users</h1>
+        {this.state.users.map(user =>
+          <div key={user.id}>{user.name} {user.age}</div>
+          )}
+      </div>
+    )
+  }
+}
+
+export default Test;
